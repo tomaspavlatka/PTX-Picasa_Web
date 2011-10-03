@@ -1,0 +1,24 @@
+Introduction
+------------
+
+PTX_PicasaWeb
+
+PTX_PicasaWeb is simple PHP class to get information from Picasa Web Service.
+
+Only what you need to know is picasa ID of user you want to know information about.
+
+Code is written in object PHP.
+
+Documentation and Examples
+--------------------------
+require_once './classes/PicasaWeb.php';
+
+$userId = 'tomas.pavlatka';
+
+$picasaObj = new PTX_PicasaWeb($userId);
+$params = array(
+    'photos' => true,
+);
+$albums = $picasaObj->albums($params);
+
+Result is returned in array format.
